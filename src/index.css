@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav a.active{
+    @apply text-green-400
+}
+
+.scroll-style::-webkit-scrollbar{
+    height: 4px;
+}
+.scroll-style::-webkit-scrollbar-thumb{
+    background-color: #888;
+}
+
+@layer  components {
+    .category-link:hover .category-link_img{
+        @apply scale-[1.1];
+    }
+
+    .category-link:hover :is(.category-link_title, .category-link_title span){
+        @apply text-red-600;
+    }
+
+    .category-link_img{
+        @apply rounded-full w-[90px] h-[90px] mx-auto transition-transform duration-300;
+    }
+
+    .category-link_title{
+        @apply text-base text-center font-semibold transition-colors duration-300;
+    }
+}
