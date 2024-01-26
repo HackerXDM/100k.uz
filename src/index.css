@@ -30,3 +30,6 @@ nav a.active{
         @apply text-base text-center font-semibold transition-colors duration-300;
     }
 }
+body{
+font-family: cursive;
+}

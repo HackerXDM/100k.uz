@@ -5,10 +5,10 @@ import StarIcon from "../image/starIcon.png";
 import ContaktIcon from "../image/ContaktIcon.png";
 import SimpleRasm from "../image/SimpleRasm.jpg";
 
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
 
 import {
   Tabs,
@@ -62,6 +62,8 @@ const Detail = () => {
     setInfo(data.filter((product) => product.id == id)[0]);
   });
 
+  const [openDetails, setOpenDetails] = useState(true);
+  // console.log(openDetails);
   return (
     <section className="py-10 bg-[#ebebeb]">
       <div className="w-full max-w-[900px] px-5 mx-auto">
@@ -245,9 +247,38 @@ const Detail = () => {
               </div>
             </div>
           </div>
-          
         </div>
+
+        <div className="flex gap-5">
+          <button
+            onClick={() => {
+              setOpenDetails(true);
+            }}
+            className="rounded-full border border-gray-400 px-6 py-2 min-w-max transition-colors duration-300"
+          >
+            batafsilga otisih
+          </button>
+
+          <button
+            onClick={() => {
+              setOpenDetails(false);
+            }}
+            className="rounded-full border border-gray-400 px-6 py-2 min-w-max transition-colors duration-300"
+          >
+            kamentariyaga otish
+          </button>
+        </div>
+
+        {/* openDetails qiymati qachonki true bo'lganida batafsilni chiqaradi */}
+        {openDetails === true ? (
+          <div>batafsil</div>
+        ) : (
+          //   : aks holda commentsni chiqaradi
+          <div>comments</div>
+        )}
       </div>
+
+      {/* npm install vite */}
     </section>
   );
 };

@@ -35,9 +35,9 @@ const Home = () => {
                       src={ElektronikaImage}
                       alt="image"
                     />
-                    <h3 className="category-link_title">
+                    <h3 className="category-link_title text-xs">
                       {item}
-                      <span className="text-gray-700 transition-colors duration-300">
+                      <span className="text-gray-700  transition-colors duration-300">
                         {" "}
                         (
                         {
@@ -63,7 +63,9 @@ const Home = () => {
               Yangi kelgan mahsulotlar
             </h3>
             <Link to="/" className="text-red-700  hover:text-[#E30909]">
-              <Link to="/barchasi">Barchasini ko`rish</Link>
+            <button class="px-4 py-3 bg-gradient-to-r from-red-400 to-purple-400 text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
+            Barchasini korish
+            </button>
             </Link>
           </div>
 
@@ -101,7 +103,9 @@ const Home = () => {
           <div className="flex items-center justify-between">
             <h3 className="text-[30px] font-semibold">Ommabop mahsulotlar</h3>
             <Link to="/" className="text-red-700  hover:text-[#E30909]">
-              <p>Barchasini ko`rish</p>
+            <button class="px-4 py-3 bg-gradient-to-r from-red-400 to-purple-400 text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
+            Barchasini korish
+            </button>
             </Link>
           </div>
 

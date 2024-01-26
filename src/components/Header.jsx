@@ -12,8 +12,6 @@ import search from '../image/search.svg'
 const Header = () => {
   const playmarket = 'https://play.google.com/store/apps/details?id=uz.itmaker.stock'
   const applestore = 'https://apps.apple.com/pl/app/100k-shop/id1529911106'
-
-
  
 
   // function SearchBar({placeholder, data}) {}
@@ -37,7 +35,6 @@ const Header = () => {
             </Link>
           </div>
         </div>
-        
 
         {/* mening profilim */}
         <div className='flex items-center space-x-2'>
@@ -51,9 +48,9 @@ const Header = () => {
       <div className='bg-white'>
         <div className='w-full max-w-[900px] px-5 mx-auto'>
         <div className='container flex items-center justify-between py-3'>
-          <div className='flex items-center space-x-[126px]'>
+          <div className='flex items-center xl:space-x-[126px]'>
             <Link to='/'>
-              <img className='w-[110px] md:[200px]' src={logo_100k} alt="logo_100k" />
+              <img className='w-[110px] h-[30px] ' src={logo_100k} alt="logo_100k" />
             </Link>
             <div className='flex'>
             <div>
