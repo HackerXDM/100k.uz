@@ -31,13 +31,13 @@ const Home = () => {
                 >
                   <div className="text-center">
                     <img
-                      className="category-link_img "
-                      src={ElektronikaImage}
-                      alt="image"
-                    />
-                    <h3 className="category-link_title text-xs">
+                        className="category-link_img "
+                        src={ElektronikaImage}
+                        alt="image"
+                      />
+                    <h3 className="category-link_title text-xs my-2">
                       {item}
-                      <span className="text-gray-700  transition-colors duration-300">
+                      <span className="text-gray-700   transition-colors duration-300">
                         {" "}
                         (
                         {
@@ -62,7 +62,7 @@ const Home = () => {
             <h3 className="text-[30px] font-semibold">
               Yangi kelgan mahsulotlar
             </h3>
-            <Link to="/" className="text-red-700  hover:text-[#E30909]">
+            <Link to="/Barchasi" className="text-red-700  hover:text-[#E30909]">
             <button class="px-4 py-3 bg-gradient-to-r from-red-400 to-purple-400 text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
             Barchasini korish
             </button>
@@ -102,7 +102,7 @@ const Home = () => {
         <div className="w-full max-w-[900px] px-5 mx-auto">
           <div className="flex items-center justify-between">
             <h3 className="text-[30px] font-semibold">Ommabop mahsulotlar</h3>
-            <Link to="/" className="text-red-700  hover:text-[#E30909]">
+            <Link to="/Barchasi" className="text-red-700  hover:text-[#E30909]">
             <button class="px-4 py-3 bg-gradient-to-r from-red-400 to-purple-400 text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
             Barchasini korish
             </button>

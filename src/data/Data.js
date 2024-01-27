@@ -333,6 +333,19 @@ import TaqinchoqlarBir from "../image/TaqinchoqlarBir.webp";
 import TaqinchoqlarIkki from "../image/TaqinchoqlarIkki.webp";
 import TaqinchoqlarUch from "../image/TaqinchoqlarUch.webp";
 
+// Image import 
+import ElektronikaImage from "../image/ElektronikaImage.webp";
+import AksessuarlarImage from "../image/AksessuarlarImage.webp"
+import OyinchoqlarImage from "../image/OyinchoqlarImage.png"
+import SovgaImage from "../image/SovgaImageThree.png";
+import MaishiyTexnikaImage from "../image/MaishiyTexnikaImage.webp"
+import Texnika from "../image/TexnikaImage.jpg"
+import SportJihozlari from "../image/SportJihozlari.png"
+import Gozalliklar from "../image/GozallikImage.webp"
+import QoshimchaJihozlar from "../image/QoshimchaJihozlar.jpg"
+import Telefonlar from "../image/TelefonlarImage.webp"
+import GozallikImage from "../image/GozallikImage.webp"
+
 export const data = [
   {
     id: 0,
@@ -347,6 +360,7 @@ export const data = [
     comments: "mahsulot yaxshi",
     brand: "Asilshop",
     category: "Elektronika",
+    ImageValue: ElektronikaImage
   },
   {
     id: 1,
@@ -2992,6 +3006,7 @@ export const data = [
     category: "Sovg'alar",
   },
 ];
+
 
 export function setCategoryToArray(arr) {
   let categoryes = new Set();

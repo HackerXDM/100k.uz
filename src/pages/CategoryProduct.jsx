@@ -22,8 +22,9 @@ const CategoryProduct = () => {
     }
   }, [category]);
   return (
-    <div className="max-w-[900px] w-full px-5 mx-auto pt-9">
-      <div className="flex gap-5 overflow-x-auto mb-10">
+    <div className="bg-gray-50">
+    <div className="max-w-[900px] w-full px-5 mx-auto pt-9">    
+      <div className="flex gap-5 overflow-x-auto mb-10 py-3">
         <Link
           to="/Barchasi"
           className={`${
@@ -48,7 +49,7 @@ const CategoryProduct = () => {
       </div>
 
       {/* products */}
-      <ul className="grid grid-cols-4 gap-3 mt-3 ">
+      <ul className="grid grid-cols-4 gap-3 mt-3 my-10">
         {productsData.length > 0 ? (
           productsData.map((product) => {
             return (
@@ -73,9 +74,10 @@ const CategoryProduct = () => {
             );
           })
         ) : (
-          <h1>Nimadir xato ketdi...</h1>
+          <h1 className="text-center font-bold mx-auto">Nimadir xato ketdi...</h1>
         )}
       </ul>
+    </div>
     </div>
   );
 };

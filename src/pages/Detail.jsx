@@ -5,19 +5,6 @@ import StarIcon from "../image/starIcon.png";
 import ContaktIcon from "../image/ContaktIcon.png";
 import SimpleRasm from "../image/SimpleRasm.jpg";
 
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import ClickAwayListener from "@mui/material/ClickAwayListener";
-
-import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
-
 const Detail = () => {
   const [open, setOpen] = React.useState(false);
 
@@ -65,7 +52,7 @@ const Detail = () => {
   const [openDetails, setOpenDetails] = useState(true);
   // console.log(openDetails);
   return (
-    <section className="py-10 bg-[#ebebeb]">
+    <section className=" pt-10 bg-[#ebebeb]">
       <div className="w-full max-w-[900px] px-5 mx-auto">
         <div className="flex justify-between items-center py-5">
           <div>
@@ -249,36 +236,75 @@ const Detail = () => {
           </div>
         </div>
 
-        <div className="flex gap-5">
-          <button
+        <div className="flex pt-10">
+          <button 
             onClick={() => {
               setOpenDetails(true);
             }}
-            className="rounded-full border border-gray-400 px-6 py-2 min-w-max transition-colors duration-300"
+            className="px-6 py-2 font-medium bg-white border-gray-200 border-t border-x "
           >
-            batafsilga otisih
+            Batafsil ma'lumot
           </button>
 
           <button
             onClick={() => {
               setOpenDetails(false);
             }}
-            className="rounded-full border border-gray-400 px-6 py-2 min-w-max transition-colors duration-300"
+            className="px-6 py-2 font-medium bg-white border-gray-200 border-t border-x "
           >
             kamentariyaga otish
           </button>
         </div>
 
-        {/* openDetails qiymati qachonki true bo'lganida batafsilni chiqaradi */}
-        {openDetails === true ? (
-          <div>batafsil</div>
-        ) : (
-          //   : aks holda commentsni chiqaradi
-          <div>comments</div>
-        )}
       </div>
-
-      {/* npm install vite */}
+      {/* openDetails qiymati qachonki true bo'lganida batafsilni chiqaradi */}
+      {openDetails === true ? (
+        <div className="bg-white py-10">
+        <div className="w-full max-w-[900px] px-5 mx-auto">
+      <p>{info.desc}</p>
+        </div>
+        </div>
+      ) : (
+        //   : aks holda commentsni chiqaradi
+        <div className="bg-white ">
+          <div className="w-full max-w-[900px] px-5 mx-auto">
+      <p className="pb-10 pt-14 text-3xl">Mijozlar tomonidan qoldirilgan izohlar</p>
+      <div className="flex bg-gray-200 p-3 rounded-xl space-x-2">
+      <img className="bg-gray-200 w-[60px] h-[60px] rounded-full" src={ContaktIcon}alt="Contakt icon"/>
+      <div className="flex">
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <p className="ml-5">7 месяцев назад</p>
+      </div>
+      </div>
+      <div className="flex bg-gray-200 p-3 rounded-xl space-x-2 my-5">
+      <img className="bg-gray-200 w-[60px] h-[60px] rounded-full" src={ContaktIcon}alt="Contakt icon"/>
+      <div className="flex">
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <p className="ml-5">6 месяцев назад</p>
+      </div>
+      </div>
+      <div className="flex bg-gray-200 p-3 rounded-xl space-x-2">
+      <img className="bg-gray-200 w-[60px] h-[60px] rounded-full" src={ContaktIcon}alt="Contakt icon"/>
+      <div className="flex">
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <img className="w-[25px] h-[25px]" src={StarIcon} alt="Star icon"/>
+      <p className="ml-5">3 месяца назад</p>
+      </div>
+      </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
