@@ -78,10 +78,10 @@ const Header = () => {
         <div className="bg-white">
           <div className="w-full max-w-[900px] px-5 mx-auto">
             <div className="container flex items-center justify-between py-3">
-              <div className="flex items-center xl:space-x-[126px]">
+              <div className="flex items-center sm:space-x-[1px]  md:space-x-[100px] lg:space-x-[130px] xl:space-x-[126px]">
                 <Link to="/">
                   <img
-                    className="w-[110px] h-[30px] "
+                    className="w-[110px] h-[30px] md:h-[30px] md:[110px]"
                     src={logo_100k}
                     alt="logo_100k"
                   />
@@ -95,26 +95,27 @@ const Header = () => {
                           setSearchProduct(e.target.value.trim().toLowerCase());
                           setRender((prev) => !prev);
                         }}
-                        className="border-2  rounded-l-full py-1 text-black px-5 w-[350px]"
+                        className="border-2 sm:ml-5  rounded-l-full py-1 text-black  px-5 sm:w-[500px] xl:w-[350px]"
                         type="text"
                         placeholder="qidiruv..."
                       />
                     </div>
                     <div className="bg-red-600  py-1 px-3  rounded-e-full">
                       <img
-                        className="w-[15px] h-[25px]"
+                        className="w-[15px] h-[25px] md:h-[25px] md:w-[30px]"
                         src={search}
                         alt="search_icon"
                       />
                     </div>
                   </div>
                   {searchedProduct.length > 0 && (
-                    <ul className="absolute w-full top-full max-h-72 overflow-auto scroll-style-2 bg-white px-2 py-2 space-y-2">
+                    <ul className="absolute w-full top-full max-h-64 overflow-auto scroll-style-2 bg-white px-2 py-2 space-y-2">
                       {searchedProduct &&
                         searchedProduct.map((product) => {
                           return (
-                            <li key={product.id}>
+                            <li key={product.id} className="py-2 hover:bg-gray-100">
                               <Link to={`/${product.category}/${product.id}`}>
+                                {data.image}
                                 {product.name}
                               </Link>
                             </li>
@@ -126,7 +127,7 @@ const Header = () => {
                 <div>
                   <Link
                     to="https://t.me/yuzkabot"
-                    className="hover:text-red-500  text-sm md:text-base flex space-x-2"
+                    className="md:hover:text-red-500 xl:hover:text-red-500 sm:hidden xl:text-sm md:text-base md:flex  md:space-x-2 xl:flex xl:space-x-2"
                   >
                     <b>Telegram</b>
                     <b>bot</b>

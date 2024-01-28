@@ -30,11 +30,17 @@ const Home = () => {
                   className="flex items-center justify-center flex-col space-y-2.5 category-link"
                 >
                   <div className="text-center">
-                    <img
-                        className="category-link_img "
-                        src={ElektronikaImage}
-                        alt="image"
-                      />
+                    {data.map((Image, index) => {
+                      return(
+                        <img
+                            key={index}
+                            className="category-link_img "
+                            src={Image.ImageValue}
+                            alt="image"
+                          />
+                      )
+                    })
+                    }
                     <h3 className="category-link_title text-xs my-2">
                       {item}
                       <span className="text-gray-700   transition-colors duration-300">
