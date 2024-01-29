@@ -49,7 +49,7 @@ const CategoryProduct = () => {
       </div>
 
       {/* products */}
-      <ul className="grid grid-cols-4 gap-3 mt-3 my-10">
+      <ul className="grid xl:grid-cols-4 grid-cols-3 lg:grid-cols-4 md:cols-span-4 sm:cols-span-3 gap-3 mt-3 my-10">
         {productsData.length > 0 ? (
           productsData.map((product) => {
             return (

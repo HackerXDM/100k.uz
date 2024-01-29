@@ -78,7 +78,7 @@ const Header = () => {
         <div className="bg-white">
           <div className="w-full max-w-[900px] px-5 mx-auto">
             <div className="container flex items-center justify-between py-3">
-              <div className="flex items-center sm:space-x-[1px] md:space-x-[50px] lg:space-x-[80px] xl:space-x-[76px]">
+              <div className="flex items-center sm:space-x-[1px] md:space-x-[10px] lg:space-x-[60px] xl:space-x-[120px] space-x-[12px]">
               <Link to="/">
               <img
                 className="w-[110px] h-[20px] sm:h-[30px] sm:w-[80px] md:h-[30px] md:w-[80px] lg:w-[110px] lg:h-[40px] xl:w-[110px] xl:h-[35px]"
@@ -104,7 +104,7 @@ const Header = () => {
                     </div>
                     <div className="bg-red-600  py-1 px-3  rounded-e-full">
                       <img
-                        className="w-[15px] h-[25px] md:h-[25px] md:w-[30px]"
+                        className="w-[15px] h-[25px] md:h-[25px] md:w-[30px] lg:w-[20px] lg:h-[20px] xl:w-[20px] xl:h-[20px]"
                         src={search}
                         alt="search_icon"
                       />
@@ -129,7 +129,7 @@ const Header = () => {
                 <div>
                   <Link
                     to="https://t.me/yuzkabot"
-                    className="md:hover:text-red-500 xl:hover:text-red-500 sm:hidden xl:text-sm md:text-base md:flex  md:space-x-2 xl:flex xl:space-x-2"
+                    className="md:hover:text-red-500 xl:hover:text-red-500  xl:text-sm md:text-base   md:space-x-2 xl:flex xl:space-x-2 md:hidden"
                   >
                     <b>Telegram</b>
                     <b>bot</b>
