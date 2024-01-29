@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className='bg-gray-800 text-white p-10'>
         <div className={`${styles.container}`}>
           <ul>
-            <li className='xl:flex md:space-x-[108px] lg:space-x-[107px] xl:space-x-[109px] pb-10'>
+            <li className='xl:flex  md:space-x-[108px] lg:space-x-[107px] xl:space-x-[109px] pb-10'>
               <NavLink to='/' className='transition ease-in-out delay-150 hover:text-red-600  hover:-translate-y-1 hover:scale-110  duration-300'>Mening kabinetim</NavLink>
               <NavLink className='transition ease-in-out delay-150 hover:text-red-600  hover:-translate-y-1 hover:scale-110  duration-300'>Biz haqimizda</NavLink>
               <NavLink to='aloqa_uchun' className='transition ease-in-out delay-150 hover:text-red-600  hover:-translate-y-1 hover:scale-110  duration-300'>Aloqa uchun</NavLink>

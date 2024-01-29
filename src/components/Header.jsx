@@ -78,14 +78,16 @@ const Header = () => {
         <div className="bg-white">
           <div className="w-full max-w-[900px] px-5 mx-auto">
             <div className="container flex items-center justify-between py-3">
-              <div className="flex items-center sm:space-x-[1px]  md:space-x-[100px] lg:space-x-[130px] xl:space-x-[126px]">
-                <Link to="/">
-                  <img
-                    className="w-[110px] h-[30px] md:h-[30px] md:[110px]"
-                    src={logo_100k}
-                    alt="logo_100k"
-                  />
-                </Link>
+              <div className="flex items-center sm:space-x-[1px] md:space-x-[50px] lg:space-x-[80px] xl:space-x-[76px]">
+              <Link to="/">
+              <img
+                className="w-[110px] h-[20px] sm:h-[30px] sm:w-[80px] md:h-[30px] md:w-[80px] lg:w-[110px] lg:h-[40px] xl:w-[110px] xl:h-[35px]"
+                src={logo_100k}
+                alt="logo_100k"
+              />
+            </Link>
+
+
                 <div className="flex flex-col relative">
                   <div className="flex">
                     <div>
