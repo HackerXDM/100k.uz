@@ -37,7 +37,7 @@ const Header = () => {
               <Link to={playmarket} target="_blank">
                 <button className="flex items-center">
                   <img
-                    className="w-[18px] mr-1"
+                    className="w-[18px] mr-1 "
                     src={android_icon}
                     alt="android icon"
                   />
@@ -76,12 +76,12 @@ const Header = () => {
       </div>
       <nav>
         <div className="bg-white">
-          <div className="w-full max-w-[900px] px-5 mx-auto">
-            <div className="container flex items-center justify-between py-3">
-              <div className="flex items-center sm:space-x-[1px] md:space-x-[10px] lg:space-x-[60px] xl:space-x-[120px] space-x-[12px]">
+          <div className="w-full max-w-[900px] pl-1 mx-auto">
+            <div className=" flex items-center justify-between py-3">
+              <div className="flex items-center sm:space-x-[34px] md:space-x-[100px] lg:space-x-[153px] xl:space-x-[120px] space-x-[20px]">
               <Link to="/">
               <img
-                className="w-[110px] h-[20px] sm:h-[30px] sm:w-[80px] md:h-[30px] md:w-[80px] lg:w-[110px] lg:h-[40px] xl:w-[110px] xl:h-[35px]"
+                className="w-[90px] h-[30px] sm:h-[27px] sm:w-[80px] md:h-[30px] md:w-[80px] lg:w-[105px] lg:h-[25px] xl:w-[110px] xl:h-[35px]"
                 src={logo_100k}
                 alt="logo_100k"
               />
@@ -97,18 +97,19 @@ const Header = () => {
                           setSearchProduct(e.target.value.trim().toLowerCase());
                           setRender((prev) => !prev);
                         }}
-                        className="border-2 sm:ml-5  rounded-l-full py-1 text-black  px-5 sm:w-[500px] xl:w-[350px]"
+                        className="border-2 sm:ml-5 rounded-l-full py-1 text-black px-5 md:w-[350px] sm:w-[350px] lg:w-[300px] w-[450px] xl:w-[360px]"
                         type="text"
                         placeholder="qidiruv..."
                       />
                     </div>
-                    <div className="bg-red-600  py-1 px-3  rounded-e-full">
-                      <img
-                        className="w-[15px] h-[25px] md:h-[25px] md:w-[30px] lg:w-[20px] lg:h-[20px] xl:w-[20px] xl:h-[20px]"
-                        src={search}
-                        alt="search_icon"
-                      />
-                    </div>
+                   <button className="flex items-center bg-red-600 py-1 px-3 rounded-r-full">
+                    <img
+                      className="w-[15px] h-[25px] md:h-[15px] md:w-[20px] sm:w-[20px] lg:w-[20px] lg:h-[20px] xl:w-[20px] xl:h-[20px]"
+                      src={search}
+                      alt="search_icon"
+                    />
+                  </button>
+
                   </div>
                   {searchedProduct.length > 0 && (
                     <ul className="absolute w-full top-full max-h-64 overflow-auto scroll-style-2 bg-white px-2 py-2 space-y-2">
@@ -127,13 +128,13 @@ const Header = () => {
                   )}
                 </div>
                 <div>
-                  <Link
-                    to="https://t.me/yuzkabot"
-                    className="md:hover:text-red-500 xl:hover:text-red-500  xl:text-sm md:text-base   md:space-x-2 xl:flex xl:space-x-2 md:hidden"
-                  >
-                    <b>Telegram</b>
-                    <b>bot</b>
-                  </Link>
+                <Link
+                  to="https://t.me/yuzkabot"
+                  className="w-[30px] h-[50px] hidden sm:[w-30px] sm:h-[50px] md:h-[20px] md:w-[20px] lg:w-[20px] lg:h-[20px] xl:w-[46px] xl:h-[46px]"
+                >
+                  <b>Telegram</b>
+                  <b>bot</b>
+                </Link>
                 </div>
               </div>
             </div>

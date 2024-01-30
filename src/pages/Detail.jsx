@@ -93,15 +93,15 @@ const Detail = () => {
           </div>
         </div>
 
-        <div className="grid gap-8 grid-cols-2">
+        <div className="xl:grid xl:gap-8 xl:grid-cols-2 lg:grid lg:gap-8 lg:grid-cols-2 md:grid md:gap-8 md:grid-cols-2 sm:grid sm:gap-8 sm:grid-cols-1">
           <div>
             <img
-              className="w-[431px] h-[431px] rounded-xl mb-10"
+              className="xl:w-[431px] xl:h-[431px] lg:w-[431px] lg:h-[431px] md:w-[431px] md:h-[431px] sm:w-screen sm:h-[431px] w-screen h-[300px] rounded-xl mb-10"
               src={info.image}
               alt={info.name}
             />
 
-            <div className="bg-white p-2 rounded-xl py-5">
+            <div className="bg-white p-2 rounded-xl my-5 py-5">
               <div className="flex justify-between  items-center">
                 <div className="flex items-center space-x-5">
                   <img
@@ -157,7 +157,7 @@ const Detail = () => {
                 <div className="bg-blue-200 p-5 rounded-md font-normal my-3">
                   <span>{info.warning}</span>
                 </div>
-                <div className="max-w-md mx-auto p-6">
+                <div className="xl:max-w-md xl:mx-auto lg:max-w-md lg:mx-auto md:mx-auto md:max-w-md  xl:p-6 lg:p-6 sm:max-w-900 md:p-6">
                   {isSubmitted ? (
                     <div
                       className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4"
@@ -185,7 +185,7 @@ const Detail = () => {
                         <input
                           type="text"
                           id="name"
-                          className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                          className="mt-1 p-2 xl:w-full lg:w-full md:w-full sm:w-[100%] w-[100%] border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                           onChange={(e) => setIsm(e.target.value)}
                           placeholder="Ism"
                         />
@@ -198,7 +198,7 @@ const Detail = () => {
                         <input
                           type="tel"
                           id="phone"
-                          className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                          className="mt-1 p-2 xl:w-full lg:w-full md:w-full sm:w-[100%] w-[100%]  border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                           onChange={(e) => setPhone(e.target.value)}
                           placeholder="Telefon raqam"
                         />
@@ -212,7 +212,7 @@ const Detail = () => {
                         </label>
                         <select
                           id="region"
-                          className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                          className="mt-1 p-2 xl:w-full lg:w-full md:w-full sm:w-[100%] w-[100%]  border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                           onChange={(e) => setRegion(e.target.value)}
                         >
                           <option value="">Tanlang...</option>
@@ -229,7 +229,7 @@ const Detail = () => {
                       </button>
                     </form>
                   )}
-                  <img className="pt-5" src={SimpleRasm} al="Simple rasm"></img>
+                  <img className="pt-5 xl:w-[100%] xl:h-[130px] lg:w-[100%] lg:h-[130px] md:w-[100%] md:h-[130px] sm:w-screen sm:h-[170px] w-screen h-[170px] " src={SimpleRasm} al="Simple rasm"></img>
                 </div>
               </div>
             </div>
