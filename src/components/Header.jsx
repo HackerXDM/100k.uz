@@ -10,8 +10,7 @@ import search from "../image/search.svg";
 import { data } from "../data/Data";
 
 const Header = () => {
-  const playmarket =
-    "https://play.google.com/store/apps/details?id=uz.itmaker.stock";
+  const playmarket ="https://play.google.com/store/apps/details?id=uz.itmaker.stock";
   const applestore = "https://apps.apple.com/pl/app/100k-shop/id1529911106";
   const [searchProduct, setSearchProduct] = useState("");
   const [render, setRender] = useState(false);
@@ -37,7 +36,7 @@ const Header = () => {
               <Link to={playmarket} target="_blank">
                 <button className="flex items-center">
                   <img
-                    className="w-[18px] mr-1 "
+                    className="w-[18px] mr-1 hidden sm:inline-block md:inline-block lg:inline-block xl:inline-block"
                     src={android_icon}
                     alt="android icon"
                   />
@@ -49,7 +48,7 @@ const Header = () => {
               <Link to={applestore} target="_blank">
                 <button className="flex items-center">
                   <img
-                    className="w-[18px] mr-1"
+                    className="w-[18px] mr-1 hidden sm:inline-block md:inline-block lg:inline-block xl:inline-block"
                     src={apple_icon}
                     alt="apple icon"
                   />
@@ -97,7 +96,7 @@ const Header = () => {
                           setSearchProduct(e.target.value.trim().toLowerCase());
                           setRender((prev) => !prev);
                         }}
-                        className="border-2 sm:ml-5 rounded-l-full py-1 text-black px-5 md:w-[350px] sm:w-[350px] lg:w-[300px] w-[450px] xl:w-[360px]"
+                        className="border-2 sm:ml-5 rounded-l-full py-1 text-black px-5 md:w-[350px] sm:w-[350px] lg:w-[300px] w-[390px] xl:w-[360px]"
                         type="text"
                         placeholder="qidiruv..."
                       />
@@ -130,7 +129,7 @@ const Header = () => {
                 <div>
                 <Link
                   to="https://t.me/yuzkabot"
-                  className="w-[30px] h-[50px] hidden sm:[w-30px] sm:h-[50px] md:h-[20px] md:w-[20px] lg:w-[20px] lg:h-[20px] xl:w-[46px] xl:h-[46px]"
+                  className="hidden sm:inline-block md:inline-block lg:inline-block xl:inline-block"
                 >
                   <b>Telegram</b>
                   <b>bot</b>

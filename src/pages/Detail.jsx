@@ -56,7 +56,7 @@ const Detail = () => {
       <div className="w-full max-w-[900px] px-5 mx-auto">
         <div className="flex justify-between items-center py-5">
           <div>
-            <h3 className="text-2xl font-bold">{info.name}</h3>
+            <h3 className="xl:text-2xl xl:w-96 xl:font-bold lg:text-2xl lg:w-96 lg:font-bold md:text-2xl md:w-96 md:font-bold sm:w-96 sm:text-xl sm:font-bold text-xl font-bold w-80">{info.name}</h3>
             <div></div>
           </div>
           <div>
