@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <>
       <div className="bg-gray-200 py-10">
-        <div className="w-full max-w-[900px] py-3 overflow-auto scroll-style px-5 mx-auto">
+        <div className="w-full max-w-[1000px] py-3 overflow-auto scroll-style px-5 mx-auto">
           <div className="grid grid-cols-10 gap-4 min-w-max">
             {category.map((item, index) => {
               return (
@@ -67,85 +67,90 @@ const Home = () => {
 
       {/* Section */}
       <section className="py-7 bg-gray-100">
-        <div className="w-full max-w-[900px] px-5 mx-auto">
-          <div className="xl:flex xl:items-center xl:justify-between md:flex md:items-center md:justify-between lg:flex lg:items-center lg:justify-between  sm:flex sm:items-center sm:justify-between">
-            <h3 className="text-[30px] font-semibold">
-              Yangi kelgan mahsulotlar
-            </h3>
-            <Link to="/Barchasi" className="text-red-700 hover:text-[#E30909]">
-              <button class="xl:px-4 xl:py-3 xl:bg-gradient-to-r xl:from-red-400 xl:to-purple-400 xl:text-white xl:font-bold xl:rounded-full xl:transition-transform  xl:transform-gpu  xl:hover:-translate-y-1 xl::shadow-lg lg:px-4 lg:py-3 lg:bg-gradient-to-r lg:from-red-400 lg:to-purple-400 lg:text-white lg:font-bold lg:rounded-full lg:transition-transform  lg:transform-gpu  lg:hover:-translate-y-1 lg::shadow-lg md:px-4 md:py-3 md:bg-gradient-to-r md:from-red-400 md:to-purple-400 md:text-white md:font-bold md:rounded-full md:transition-transform  md:transform-gpu  md:hover:-translate-y-1 md::shadow-lg sm:px-4 sm:py-3 sm:bg-gradient-to-r sm:from-red-400 sm:to-purple-400 sm:text-white sm:font-bold sm:rounded-full sm:transition-transform  sm:transform-gpu  sm:hover:-translate-y-1 sm::shadow-lg px-3 py-2 bg-gradient-to-r from-red-400 to-purple-400 text-white font-bold rounded-full transition-transform  transform-gpu  hover:-translate-y-1 :shadow-lg my-5">
-                Barchasini korish
-              </button>
-            </Link>
-          </div>
+  <div className="w-full max-w-[900px] px-5 mx-auto">
+    <div className="flex flex-col sm:flex-row items-center justify-between">
+    <div className="xl:flex xl:justify-between text-center mb-3">
+      <h3 className="text-[30px] font-semibold">Yangi kelgan mahsulotlar</h3>
+      <Link
+        to="/Barchasi"
+        className="text-red-700 hover:text-[#E30909] inline-block"
+      >
+        <button className="px-4 py-3 bg-gradient-to-r from-red-400 to-purple-400 text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
+          Barchasini korish
+        </button>
+      </Link>
+    </div>
+    </div>
 
-          <ul className="xl:grid xl:grid-cols-4 xl:gap-3 xl:mt-3 lg:grid lg:grid-cols-4 lg:gap-3 lg:mt-3 md:grid md:grid-cols-4 md:gap-3 md:mt-3 sm:grid sm:grid-cols-3 sm:gap-5 sm:mt-3 grid grid-cols-2 gap-5 mt-3 ">
-            {newProducts &&
-              newProducts.slice(0, 8).map((product) => {
-                return (
-                  <li className="border rounded-lg bg-white" key={product.id}>
-                    <Link to={`/${product.category}/${product.id}`}>
-                      <img
-                        className="rounded-lg w-[300px] h-[190px] xl:w-[300px] xl:h-[190px]"
-                        src={product.image}
-                        alt={product.name}
-                      />
-                      <div className="p-1">
-                        <h3 className="text-sm opacity-90">{product.name}</h3>
-                        <div className="flex items-center my-1">
-                          <span>
-                            <b>{product.price},000 </b>
-                            so`m
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
-                );
-              })}
-          </ul>
-        </div>
+    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 mt-3">
+      {newProducts &&
+        newProducts.slice(0, 8).map((product) => (
+          <li className="border rounded-lg bg-white" key={product.id}>
+            <Link to={`/${product.category}/${product.id}`}>
+              <img
+                className="rounded-lg w-full h-[190px] object-cover"
+                src={product.image}
+                alt={product.name}
+              />
+              <div className="p-1">
+                <h3 className="text-sm opacity-90">{product.name}</h3>
+                <div className="flex items-center my-1">
+                  <span>
+                    <b>{product.price},000 </b>
+                    so`m
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </li>
+        ))}
+    </ul>
+  </div>
       </section>
+
 
       {/* Main */}
       <main className="py-7 bg-gray-100">
-        <div className="w-full max-w-[900px] px-5 mx-auto">
-          <div className="xl:flex xl:items-center xl:justify-between md:flex md:items-center md:justify-between lg:flex lg:items-center lg:justify-between  sm:flex sm:items-center sm:justify-between">
-            <h3 className="text-[30px] font-semibold">Ommabop mahsulotlar</h3>
-            <Link to="/Barchasi" className="text-red-700  hover:text-[#E30909]">
-              <button class="xl:px-4 xl:py-3 xl:bg-gradient-to-r xl:from-red-400 xl:to-purple-400 xl:text-white xl:font-bold xl:rounded-full xl:transition-transform xl:transform-gpu xl:hover:-translate-y-1 xl:hover:shadow-lg, lg:px-4 lg:py-3 lg:bg-gradient-to-r lg:from-red-400 lg:to-purple-400 lg:text-white lg:font-bold lg:rounded-full lg:transition-transform lg:transform-gpu lg:hover:-translate-y-1 lg:hover:shadow-lg md:px-4 md:py-3 md:bg-gradient-to-r md:from-red-400 md:to-purple-400 md:text-white md:font-bold md:rounded-full md:transition-transform md:transform-gpu md:hover:-translate-y-1 md:hover:shadow-lg sm:px-4 sm:py-3 sm:bg-gradient-to-r sm:from-red-400 sm:to-purple-400 sm:text-white sm:font-bold sm:rounded-full sm:transition-transform sm:transform-gpu sm:hover:-translate-y-1 sm:hover:shadow-lg px-3 py-2 bg-gradient-to-r from-red-400 to-purple-400 text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg my-5">
-                Barchasini korish
-              </button>
-            </Link>
-          </div>
+  <div className="w-full max-w-[900px] px-5 mx-auto">
+    <div className="text-center mb-3">
+      <h3 className="text-[30px] font-semibold">Ommabop mahsulotlar</h3>
+      <Link
+        to="/Barchasi"
+        className="text-red-700 hover:text-[#E30909] inline-block"
+      >
+        <button className="px-4 py-3 bg-gradient-to-r from-red-400 to-purple-400 text-white font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
+          Barchasini korish
+        </button>
+      </Link>
+    </div>
 
-          <ul className="xl:grid xl:grid-cols-4 xl:gap-3 xl:mt-3 lg:grid lg:grid-cols-4 lg:gap-3 lg:mt-3 md:grid md:grid-cols-4 md:gap-3 md:mt-3 sm:grid sm:grid-cols-3 sm:gap-5 sm:mt-3 grid grid-cols-2 gap-5 mt-3">
-            {topProducts &&
-              topProducts.slice(0, 8).map((product) => {
-                return (
-                  <li className="border rounded-lg bg-white" key={product.id}>
-                    <Link to={`/${product.category}/${product.id}`}>
-                      <img
-                        className="rounded-lg w-[300px] h-[190px] xl:w-[300px] xl:h-[190px]"
-                        src={product.image}
-                        alt={product.name}
-                      />
-                      <div className="p-1">
-                        <h3 className="text-sm opacity-90">{product.name}</h3>
-                        <div className="flex items-center my-1">
-                          <span>
-                            <b>{product.price},000 </b>
-                            so`m
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
-                );
-              })}
-          </ul>
-        </div>
-      </main>
+    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 mt-3">
+      {topProducts &&
+        topProducts.slice(0, 8).map((product) => (
+          <li className="border rounded-lg bg-white" key={product.id}>
+            <Link to={`/${product.category}/${product.id}`}>
+              <img
+                className="rounded-lg w-full h-[190px] object-cover"
+                src={product.image}
+                alt={product.name}
+              />
+              <div className="p-1">
+                <h3 className="text-sm opacity-90">{product.name}</h3>
+                <div className="flex items-center my-1">
+                  <span>
+                    <b>{product.price},000 </b>
+                    so`m
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </li>
+        ))}
+    </ul>
+  </div>
+</main>
+
+
 
       {/* 100k Qulayliklari */}
       <div className="bg-white pb-20 pt-5">
